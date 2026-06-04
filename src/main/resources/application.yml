@@ -1,0 +1,13 @@
+spring:
+    application:
+        name: stupad
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:mysql://localhost:3309/study-app
+        username: root
+        password: password
+    jpa:
+        hibernate:
+            ddl-auto: create
+server:
+    port: 8080
