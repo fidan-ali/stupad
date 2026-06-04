@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8
+    container_name: test_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: study-app
+    ports:
+      - "3309:3306"
+
+  adminer:
+    image: adminer
+    container_name: adminer_test_db
+    ports:
+      - "8582:8080"
