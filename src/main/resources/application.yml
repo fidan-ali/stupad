@@ -3,10 +3,11 @@ spring:
         name: stupad
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3309/study-app
+        url: "jdbc:mysql://localhost:3309/study-app?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true"
         username: root
         password: password
     jpa:
+        database-platform: org.hibernate.dialect.MySQLDialect
         hibernate:
             ddl-auto: create
 server:
