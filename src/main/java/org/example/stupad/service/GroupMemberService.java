@@ -34,7 +34,7 @@ public class GroupMemberService {
     }
 
     public GroupMemberDto add(GroupMemberDto groupMemberDto) {
-        GroupMember member = groupMemberMapper.toGroup(groupMemberDto);
+        GroupMember member = groupMemberMapper.toGroupMember(groupMemberDto);
         log.info("Adding group member relationship: {}", member);
         GroupMember savedMember = groupMemberRepository.save(member);
         return groupMemberMapper.toGroupMemberDto(savedMember);

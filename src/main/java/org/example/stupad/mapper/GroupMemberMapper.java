@@ -15,7 +15,7 @@ public interface GroupMemberMapper {
 
     @Mapping(source = "groupId", target = "group.id")
     @Mapping(source = "userId", target = "user.id")
-    GroupMember toGroup(GroupMemberDto groupMemberDto);
+    GroupMember toGroupMember(GroupMemberDto groupMemberDto);
 
     List<GroupMemberDto> toGroupMemberDtoList(List<GroupMember> members);
 }
